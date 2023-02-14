@@ -1,60 +1,26 @@
 import { useState } from 'react';
 import './App.css';
-import { Task } from './Task';
-
+import Axios  from 'axios';
 function App() {
 
-const [InputText,SetText]=useState("")
-const [Tasks,SetTask]=useState([])
+const [catFact,SetCatFact]=useState("");
 
-const GetText=(event)=>{
-SetText(event.target.value)
-}
-const SubmitTask=()=>{
-  const task={
-    id: Tasks.length === 0 ? 1 : Tasks[Tasks.length - 1].id + 1,
-    taskName:InputText,
-    completed:false,
-  }
-SetTask([...Tasks,task])
-}
-const deleteTask=(id)=>{
-    SetTask(Tasks.filter((task)=>{
-     return task.id !== id}) )
-}
+  Axios.get("https://catfact.ninja/fact").then((res)=>{
 
-const CompleteTask=(id)=>{
-SetTask(
-Tasks.map((task)=>{
-if(task.id===id){
-  return {...task,completed:true}
-}
-else return task
-
-})
-
-)
-}
+  console.log(res.data.fact)
+  SetCatFact(res.data.fact)
+  });
 
 
 
-
- 
 return (
     <div className="App">
-    <div className='AddTask'>
-<input onChange={GetText} type='text'/>
-<button onClick={SubmitTask}>Add Task</button>
-    </div>
-<div className='ListTask'>
-{Tasks.map((task)=>{
-  return (<Task completed={task.completed} taskName={task.taskName} id={task.id} CompleteTask={CompleteTask} deleteTask={deleteTask} />
-  )
-})}
-    </div>
+    
+  
+   <div><h1>wtf </h1></div>
 
 
-
+<h1>hiiiiiiiiiisiiiiiiiii</h1>
 
     </div>
   );
