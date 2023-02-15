@@ -18,19 +18,20 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-      
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+        
+      ]
+    },
+  
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.34.0",
     "eslint-config-react-app": "^7.0.1"
   }
 }
