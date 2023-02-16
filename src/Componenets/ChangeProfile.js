@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useContext } from "react"
+import { AppContext } from "../App"
+export const ChangeProfile = () => {
+const {SetUsername}=useContext(AppContext)
 
-export const ChangeProfile = (props) => {
 const [Text,SetText]=useState("")
 const ChangeUsername=()=>{
-    props.SetUsername(Text)
+   SetUsername(Text)
 }
 return(
 

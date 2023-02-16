@@ -18,9 +18,9 @@ return (
 <Router>
    <Navbar/>
 <Routes>
-  <Route path="/" element={<Home Username={Username} />} />
+  <Route path="/" element={<Home />} />
   <Route path="/menu" element={<Menu/>} />
-  <Route path="/profile" element={<Profile Username={Username} SetUsername={SetUsername} />} />
+  <Route path="/profile" element={<Profile  />} />
   <Route path="/contact" element={<Contact/>} />
   <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
 
