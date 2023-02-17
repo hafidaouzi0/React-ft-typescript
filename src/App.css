@@ -71,3 +71,15 @@ box-sizing: border-box;}
 .container{
   margin-top: 40px;
 }
+
+form{
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form input{
+padding: 7px;
+width: 200px;
+}
