@@ -8,9 +8,10 @@ import { Contact } from './pages/Contact';
 import { Navbar } from './Navbar';
 import { Profile } from './pages/Profile';
 import { QueryClient,QueryClientProvider } from '@tanstack/react-query';
-
+import { useCounter } from './pages/useCounter';
 
 function App() {
+const {val,increase,decrease,restart}=useCounter()
 const client=new QueryClient({defaultOptions:{
 queries:{
   refetchOnWindowFocus:false
@@ -35,7 +36,19 @@ return (
 
 </Router>
 </QueryClientProvider>
+
+<button onClick={increase}>
+INCREASE
+</button>
+<button onClick={decrease}>
+DECREASE
+</button>
+<button onClick={restart}>
+  RESTART
+  </button>
+  <h1>{val}</h1> 
     </div>
+
   );
 }
 
