@@ -83,3 +83,6 @@ form input{
 padding: 7px;
 width: 200px;
 }
+.errP{
+color: red;
+}
